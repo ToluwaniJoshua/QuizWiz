@@ -18,6 +18,7 @@ header {
     padding: 10px 0;
 }
 
+
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,6 +30,19 @@ nav {
 
 .logo {
     font-size: 24px;
+    font-weight: bold;
+}
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -55,6 +69,69 @@ nav {
     color: #ff5733;
 }
 
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff5733;
+}
+/* Mobile menu (hidden by default) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        align-items: left;
+        text-align: justify;
+    }
+    
+
+    .menu.active {
+        display: flex;
+        z-index: 999; /* Ensure it has a higher z-index value */
+    }
+    /* Add this CSS to position and style the menu toggle */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+}
+    /* Style for mobile menu links */
+    .menu a {
+        margin: 10px 0;
+    }
+}
 /* Hero section styles */
 .hero {
     background: url('elements/hero-background.jpg') no-repeat center center;
@@ -225,6 +302,26 @@ footer a:hover {
     background-color: #fff;
     color: #ff5733;
 }
+/* Button Styles */
+.cta-button2 {
+    background-color: #ff5733;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+/* Hover Effect */
+.cta-button2:hover {
+    background-color: white;
+    color: #ff5733;
+    text-decoration: none;
+}
+
 
 /* Animations */
 @keyframes bounce {
@@ -383,81 +480,8 @@ footer a {
 }
 /* Global styles for the navigation menu (desktop and mobile) */
 
-nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.menu {
-    list-style-type: none;
-    display: flex;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu li:last-child {
-    margin-right: 0;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #ff5733;
-}
 
 
-/* Mobile menu (hidden by default) */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #444;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: #fff;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-
-    /* Style for mobile menu links */
-    .menu a {
-        margin: 10px 0;
-    }
-}
 
 
