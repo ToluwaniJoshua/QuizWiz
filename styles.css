@@ -347,35 +347,8 @@ footer a {
 }
 
 /* ... (Rest of the CSS, as previously provided) ... */
-@media(max-width: 700px) {
-    hero {
-        font-size: 20px;
-    }
-    .nav-links ul li {
-        display: block;
-    }
-    .nav-links{
-        position: absolute;
-        background: #565051;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul {
-        padding: 30px;
-    }
-}
+
+
 /* Base styles for desktop */
 .features {
     display: flex;
@@ -425,9 +398,7 @@ nav {
 }
 
 .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
     display: flex;
 }
 
@@ -435,15 +406,20 @@ nav {
     margin-right: 20px;
 }
 
+.menu li:last-child {
+    margin-right: 0;
+}
+
 .menu a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .menu a:hover {
     color: #ff5733;
 }
+
 
 /* Mobile menu (hidden by default) */
 .menu-toggle {
@@ -483,7 +459,5 @@ nav {
         margin: 10px 0;
     }
 }
-/* Style for mobile menu links */
-.menu a {
-    margin: 10px 0;
-}
+
+
